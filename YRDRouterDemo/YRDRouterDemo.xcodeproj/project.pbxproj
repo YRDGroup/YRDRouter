@@ -17,6 +17,7 @@
 		EBB08A0520EB3BE00079B218 /* YRDRouterDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A0420EB3BE00079B218 /* YRDRouterDemoUITests.m */; };
 		EBB08A1920EB3E5F0079B218 /* YRDRouter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EBB08A1820EB3E5F0079B218 /* YRDRouter.podspec */; };
 		EBB08A1D20EB40B90079B218 /* YRDRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A1B20EB40B90079B218 /* YRDRouter.m */; };
+		EBB08A2320EB52C10079B218 /* YRDRouter+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A2220EB52C10079B218 /* YRDRouter+ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		EBB08A1820EB3E5F0079B218 /* YRDRouter.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = YRDRouter.podspec; path = ../../YRDRouter.podspec; sourceTree = "<group>"; };
 		EBB08A1B20EB40B90079B218 /* YRDRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDRouter.m; sourceTree = "<group>"; };
 		EBB08A1C20EB40B90079B218 /* YRDRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDRouter.h; sourceTree = "<group>"; };
+		EBB08A2120EB52C10079B218 /* YRDRouter+ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YRDRouter+ViewController.h"; sourceTree = "<group>"; };
+		EBB08A2220EB52C10079B218 /* YRDRouter+ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YRDRouter+ViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 			children = (
 				EBB08A1C20EB40B90079B218 /* YRDRouter.h */,
 				EBB08A1B20EB40B90079B218 /* YRDRouter.m */,
+				EBB08A2120EB52C10079B218 /* YRDRouter+ViewController.h */,
+				EBB08A2220EB52C10079B218 /* YRDRouter+ViewController.m */,
 			);
 			name = YRDRouter;
 			path = ../../YRDRouter;
@@ -282,6 +287,7 @@
 			files = (
 				EBB089E520EB3BDF0079B218 /* ViewController.m in Sources */,
 				EBB089F020EB3BE00079B218 /* main.m in Sources */,
+				EBB08A2320EB52C10079B218 /* YRDRouter+ViewController.m in Sources */,
 				EBB08A1D20EB40B90079B218 /* YRDRouter.m in Sources */,
 				EBB089E220EB3BDE0079B218 /* AppDelegate.m in Sources */,
 			);

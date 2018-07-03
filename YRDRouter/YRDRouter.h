@@ -24,13 +24,12 @@ typedef id (^YRDRouterObjectHandler)(NSDictionary *routerParameters);
 
 @interface YRDRouter: NSObject
 
-
 /**
- 根据 获取到的配置文件进行路由注册
- 
- @param config 路由表
+ 配置文件中的路由Key
  */
-+ (void)registerWithConfigList:(NSDictionary *)config;
+@property (nonatomic, strong) NSDictionary *config;
+
++ (instancetype)sharedInstance;
 
 /**
  *  注册 URLPattern 对应的 Handler，在 handler 中可以初始化 VC，然后对 VC 做各种操作

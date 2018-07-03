@@ -37,16 +37,6 @@ NSString *const YRDRouterParameterUserInfo = @"YRDRouterParameterUserInfo";
     return instance;
 }
 
-+ (void)registerWithConfigList:(NSDictionary *)config
-{
-    NSAssert(config,@"router config can not be nil");
-    [config enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        //处理 key
-        //处理 value
-    }];
-    
-}
-
 + (void)registerURLPattern:(NSString *)URLPattern toHandler:(YRDRouterHandler)handler
 {
     [[self sharedInstance] addURLPattern:URLPattern andHandler:handler];
@@ -69,12 +59,22 @@ NSString *const YRDRouterParameterUserInfo = @"YRDRouterParameterUserInfo";
 
 + (void)openURL:(NSString *)URL withUserInfo:(NSDictionary *)userInfo completion:(void (^)(id result))completion
 {
-    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > NSFoundationVersionNumber_iOS_8_x_Max
+URL = [URL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+#else
+URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+#endif
+    
     NSMutableDictionary *parameters = [[self sharedInstance] extractParametersFromURL:URL matchExactly:NO];
     
     [parameters enumerateKeysAndObjectsUsingBlock:^(id key, NSString *obj, BOOL *stop) {
         if ([obj isKindOfClass:[NSString class]]) {
-            parameters[key] = [obj stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > NSFoundationVersionNumber_iOS_8_x_Max
+             parameters[key] = [obj stringByRemovingPercentEncoding];
+#else
+             parameters[key] = [obj stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+#endif
+           
         }
     }];
     
@@ -144,7 +144,11 @@ NSString *const YRDRouterParameterUserInfo = @"YRDRouterParameterUserInfo";
 {
     YRDRouter *router = [YRDRouter sharedInstance];
     
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > NSFoundationVersionNumber_iOS_8_x_Max
+    URL = [URL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+#else
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+#endif
     NSMutableDictionary *parameters = [router extractParametersFromURL:URL matchExactly:NO];
     YRDRouterObjectHandler handler = parameters[@"block"];
     
