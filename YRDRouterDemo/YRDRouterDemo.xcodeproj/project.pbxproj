@@ -18,6 +18,17 @@
 		EBB08A1920EB3E5F0079B218 /* YRDRouter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EBB08A1820EB3E5F0079B218 /* YRDRouter.podspec */; };
 		EBB08A1D20EB40B90079B218 /* YRDRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A1B20EB40B90079B218 /* YRDRouter.m */; };
 		EBB08A2320EB52C10079B218 /* YRDRouter+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A2220EB52C10079B218 /* YRDRouter+ViewController.m */; };
+		EBB08A2520EB8C140079B218 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = EBB08A2420EB8C140079B218 /* config.json */; };
+		EBB08A2820EB8E080079B218 /* KJQFirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A2720EB8E080079B218 /* KJQFirstPageViewController.m */; };
+		EBB08A2B20EB8E180079B218 /* KJQProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A2A20EB8E180079B218 /* KJQProductListViewController.m */; };
+		EBB08A2E20EB91150079B218 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A2D20EB91150079B218 /* TabBarViewController.m */; };
+		EBB08A3120EB91B50079B218 /* KJQMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A3020EB91B50079B218 /* KJQMineViewController.m */; };
+		EBB08A4220EB92C70079B218 /* UIView+YRDBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A3420EB92C70079B218 /* UIView+YRDBehavior.m */; };
+		EBB08A4320EB92C70079B218 /* UIColor+YRD.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A3620EB92C70079B218 /* UIColor+YRD.m */; };
+		EBB08A4420EB92C70079B218 /* NSDictionary+YRDJSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A3A20EB92C70079B218 /* NSDictionary+YRDJSONString.m */; };
+		EBB08A4520EB92C70079B218 /* UIView+YRD.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A3B20EB92C70079B218 /* UIView+YRD.m */; };
+		EBB08A4620EB92C70079B218 /* NSString+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A3D20EB92C70079B218 /* NSString+Validate.m */; };
+		EBB08A4720EB92C70079B218 /* UITabBarItem+YRD.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A3E20EB92C70079B218 /* UITabBarItem+YRD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +70,29 @@
 		EBB08A1C20EB40B90079B218 /* YRDRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDRouter.h; sourceTree = "<group>"; };
 		EBB08A2120EB52C10079B218 /* YRDRouter+ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YRDRouter+ViewController.h"; sourceTree = "<group>"; };
 		EBB08A2220EB52C10079B218 /* YRDRouter+ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YRDRouter+ViewController.m"; sourceTree = "<group>"; };
+		EBB08A2420EB8C140079B218 /* config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		EBB08A2620EB8E080079B218 /* KJQFirstPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJQFirstPageViewController.h; sourceTree = "<group>"; };
+		EBB08A2720EB8E080079B218 /* KJQFirstPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJQFirstPageViewController.m; sourceTree = "<group>"; };
+		EBB08A2920EB8E180079B218 /* KJQProductListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJQProductListViewController.h; sourceTree = "<group>"; };
+		EBB08A2A20EB8E180079B218 /* KJQProductListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJQProductListViewController.m; sourceTree = "<group>"; };
+		EBB08A2C20EB91150079B218 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		EBB08A2D20EB91150079B218 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		EBB08A2F20EB91B50079B218 /* KJQMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJQMineViewController.h; sourceTree = "<group>"; };
+		EBB08A3020EB91B50079B218 /* KJQMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJQMineViewController.m; sourceTree = "<group>"; };
+		EBB08A3420EB92C70079B218 /* UIView+YRDBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YRDBehavior.m"; sourceTree = "<group>"; };
+		EBB08A3520EB92C70079B218 /* NSString+Validate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validate.h"; sourceTree = "<group>"; };
+		EBB08A3620EB92C70079B218 /* UIColor+YRD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YRD.m"; sourceTree = "<group>"; };
+		EBB08A3720EB92C70079B218 /* UITabBarItem+YRD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+YRD.h"; sourceTree = "<group>"; };
+		EBB08A3820EB92C70079B218 /* YRDViewBehaviorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDViewBehaviorProtocol.h; sourceTree = "<group>"; };
+		EBB08A3920EB92C70079B218 /* YRDCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDCategory.h; sourceTree = "<group>"; };
+		EBB08A3A20EB92C70079B218 /* NSDictionary+YRDJSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YRDJSONString.m"; sourceTree = "<group>"; };
+		EBB08A3B20EB92C70079B218 /* UIView+YRD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YRD.m"; sourceTree = "<group>"; };
+		EBB08A3C20EB92C70079B218 /* UIView+YRDBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YRDBehavior.h"; sourceTree = "<group>"; };
+		EBB08A3D20EB92C70079B218 /* NSString+Validate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validate.m"; sourceTree = "<group>"; };
+		EBB08A3E20EB92C70079B218 /* UITabBarItem+YRD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+YRD.m"; sourceTree = "<group>"; };
+		EBB08A3F20EB92C70079B218 /* UIColor+YRD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YRD.h"; sourceTree = "<group>"; };
+		EBB08A4020EB92C70079B218 /* UIView+YRD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YRD.h"; sourceTree = "<group>"; };
+		EBB08A4120EB92C70079B218 /* NSDictionary+YRDJSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YRDJSONString.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +143,22 @@
 		EBB089DF20EB3BDE0079B218 /* YRDRouterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EBB08A3220EB92C70079B218 /* YRDCategory */,
+				EBB08A2420EB8C140079B218 /* config.json */,
 				EBB08A1820EB3E5F0079B218 /* YRDRouter.podspec */,
 				EBB08A1220EB3C100079B218 /* YRDRouter */,
 				EBB089E020EB3BDE0079B218 /* AppDelegate.h */,
 				EBB089E120EB3BDE0079B218 /* AppDelegate.m */,
 				EBB089E320EB3BDF0079B218 /* ViewController.h */,
 				EBB089E420EB3BDF0079B218 /* ViewController.m */,
+				EBB08A2C20EB91150079B218 /* TabBarViewController.h */,
+				EBB08A2D20EB91150079B218 /* TabBarViewController.m */,
+				EBB08A2620EB8E080079B218 /* KJQFirstPageViewController.h */,
+				EBB08A2720EB8E080079B218 /* KJQFirstPageViewController.m */,
+				EBB08A2920EB8E180079B218 /* KJQProductListViewController.h */,
+				EBB08A2A20EB8E180079B218 /* KJQProductListViewController.m */,
+				EBB08A2F20EB91B50079B218 /* KJQMineViewController.h */,
+				EBB08A3020EB91B50079B218 /* KJQMineViewController.m */,
 				EBB089E620EB3BDF0079B218 /* Main.storyboard */,
 				EBB089E920EB3BE00079B218 /* Assets.xcassets */,
 				EBB089EB20EB3BE00079B218 /* LaunchScreen.storyboard */,
@@ -152,6 +196,35 @@
 			);
 			name = YRDRouter;
 			path = ../../YRDRouter;
+			sourceTree = "<group>";
+		};
+		EBB08A3220EB92C70079B218 /* YRDCategory */ = {
+			isa = PBXGroup;
+			children = (
+				EBB08A3320EB92C70079B218 /* classes */,
+			);
+			path = YRDCategory;
+			sourceTree = "<group>";
+		};
+		EBB08A3320EB92C70079B218 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				EBB08A3420EB92C70079B218 /* UIView+YRDBehavior.m */,
+				EBB08A3520EB92C70079B218 /* NSString+Validate.h */,
+				EBB08A3620EB92C70079B218 /* UIColor+YRD.m */,
+				EBB08A3720EB92C70079B218 /* UITabBarItem+YRD.h */,
+				EBB08A3820EB92C70079B218 /* YRDViewBehaviorProtocol.h */,
+				EBB08A3920EB92C70079B218 /* YRDCategory.h */,
+				EBB08A3A20EB92C70079B218 /* NSDictionary+YRDJSONString.m */,
+				EBB08A3B20EB92C70079B218 /* UIView+YRD.m */,
+				EBB08A3C20EB92C70079B218 /* UIView+YRDBehavior.h */,
+				EBB08A3D20EB92C70079B218 /* NSString+Validate.m */,
+				EBB08A3E20EB92C70079B218 /* UITabBarItem+YRD.m */,
+				EBB08A3F20EB92C70079B218 /* UIColor+YRD.h */,
+				EBB08A4020EB92C70079B218 /* UIView+YRD.h */,
+				EBB08A4120EB92C70079B218 /* NSDictionary+YRDJSONString.h */,
+			);
+			path = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +332,7 @@
 			files = (
 				EBB089ED20EB3BE00079B218 /* LaunchScreen.storyboard in Resources */,
 				EBB08A1920EB3E5F0079B218 /* YRDRouter.podspec in Resources */,
+				EBB08A2520EB8C140079B218 /* config.json in Resources */,
 				EBB089EA20EB3BE00079B218 /* Assets.xcassets in Resources */,
 				EBB089E820EB3BDF0079B218 /* Main.storyboard in Resources */,
 			);
@@ -285,11 +359,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB08A3120EB91B50079B218 /* KJQMineViewController.m in Sources */,
+				EBB08A4420EB92C70079B218 /* NSDictionary+YRDJSONString.m in Sources */,
 				EBB089E520EB3BDF0079B218 /* ViewController.m in Sources */,
+				EBB08A4720EB92C70079B218 /* UITabBarItem+YRD.m in Sources */,
+				EBB08A4220EB92C70079B218 /* UIView+YRDBehavior.m in Sources */,
 				EBB089F020EB3BE00079B218 /* main.m in Sources */,
 				EBB08A2320EB52C10079B218 /* YRDRouter+ViewController.m in Sources */,
 				EBB08A1D20EB40B90079B218 /* YRDRouter.m in Sources */,
+				EBB08A2E20EB91150079B218 /* TabBarViewController.m in Sources */,
+				EBB08A2B20EB8E180079B218 /* KJQProductListViewController.m in Sources */,
 				EBB089E220EB3BDE0079B218 /* AppDelegate.m in Sources */,
+				EBB08A4320EB92C70079B218 /* UIColor+YRD.m in Sources */,
+				EBB08A4620EB92C70079B218 /* NSString+Validate.m in Sources */,
+				EBB08A2820EB8E080079B218 /* KJQFirstPageViewController.m in Sources */,
+				EBB08A4520EB92C70079B218 /* UIView+YRD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

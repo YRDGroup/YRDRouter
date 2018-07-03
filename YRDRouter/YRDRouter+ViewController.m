@@ -30,8 +30,7 @@
 + (void)registerURLPatternWithConfig:(NSDictionary *)config
 {
     [YRDRouter sharedInstance].config = [config copy];
-    [config enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        //处理 key，
+    [config[@"path"] enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         NSDictionary *params = [self getUrlAndObjectNameWithObjectKey:key];
         [YRDRouter registerURLPattern:params[@"url"] toObjectHandler:^id(NSDictionary *routerParameters) {
             id object = [[NSClassFromString(params[@"objectName"]) alloc] init];

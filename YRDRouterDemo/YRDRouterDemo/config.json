@@ -1,0 +1,27 @@
+{
+    "scheme":"kjqApp",
+    "path":{
+        "firstpage":{
+            "objectName":"KJQFirstPageViewController",
+            "params":{
+            }
+        },
+        "product":{
+            "objectName":"KJQProductListViewController",
+            "params":{
+            }
+        },
+        "discovery":{
+            "objectName":"KJQFirstPageViewController",
+            "params":{
+            }
+        },
+        "mine":{
+            "objectName":"KJQMineViewController",
+            "params":{
+            }
+        }
+        
+    }
+    
+}
