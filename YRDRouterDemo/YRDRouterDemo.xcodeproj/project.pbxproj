@@ -16,6 +16,7 @@
 		EBB089FA20EB3BE00079B218 /* YRDRouterDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB089F920EB3BE00079B218 /* YRDRouterDemoTests.m */; };
 		EBB08A0520EB3BE00079B218 /* YRDRouterDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A0420EB3BE00079B218 /* YRDRouterDemoUITests.m */; };
 		EBB08A1520EB3C300079B218 /* YRDRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A1420EB3C300079B218 /* YRDRouter.m */; };
+		EBB08A1920EB3E5F0079B218 /* YRDRouter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EBB08A1820EB3E5F0079B218 /* YRDRouter.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		EBB08A0620EB3BE00079B218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBB08A1320EB3C300079B218 /* YRDRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YRDRouter.h; sourceTree = "<group>"; };
 		EBB08A1420EB3C300079B218 /* YRDRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YRDRouter.m; sourceTree = "<group>"; };
+		EBB08A1820EB3E5F0079B218 /* YRDRouter.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = YRDRouter.podspec; path = ../../YRDRouter.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		EBB089DF20EB3BDE0079B218 /* YRDRouterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EBB08A1820EB3E5F0079B218 /* YRDRouter.podspec */,
 				EBB08A1220EB3C100079B218 /* YRDRouter */,
 				EBB089E020EB3BDE0079B218 /* AppDelegate.h */,
 				EBB089E120EB3BDE0079B218 /* AppDelegate.m */,
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB089ED20EB3BE00079B218 /* LaunchScreen.storyboard in Resources */,
+				EBB08A1920EB3E5F0079B218 /* YRDRouter.podspec in Resources */,
 				EBB089EA20EB3BE00079B218 /* Assets.xcassets in Resources */,
 				EBB089E820EB3BDF0079B218 /* Main.storyboard in Resources */,
 			);
