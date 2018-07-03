@@ -142,19 +142,11 @@
 		EBB08A1220EB3C100079B218 /* YRDRouter */ = {
 			isa = PBXGroup;
 			children = (
-				EBB08A1A20EB40B90079B218 /* classes */,
-			);
-			name = YRDRouter;
-			path = ../../YRDRouter;
-			sourceTree = "<group>";
-		};
-		EBB08A1A20EB40B90079B218 /* classes */ = {
-			isa = PBXGroup;
-			children = (
 				EBB08A1C20EB40B90079B218 /* YRDRouter.h */,
 				EBB08A1B20EB40B90079B218 /* YRDRouter.m */,
 			);
-			path = classes;
+			name = YRDRouter;
+			path = ../../YRDRouter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
