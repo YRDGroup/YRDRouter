@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBB089E220EB3BDE0079B218 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB089E120EB3BDE0079B218 /* AppDelegate.m */; };
+		EBB089E520EB3BDF0079B218 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB089E420EB3BDF0079B218 /* ViewController.m */; };
+		EBB089E820EB3BDF0079B218 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB089E620EB3BDF0079B218 /* Main.storyboard */; };
+		EBB089EA20EB3BE00079B218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB089E920EB3BE00079B218 /* Assets.xcassets */; };
+		EBB089ED20EB3BE00079B218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB089EB20EB3BE00079B218 /* LaunchScreen.storyboard */; };
+		EBB089F020EB3BE00079B218 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB089EF20EB3BE00079B218 /* main.m */; };
+		EBB089FA20EB3BE00079B218 /* YRDRouterDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB089F920EB3BE00079B218 /* YRDRouterDemoTests.m */; };
+		EBB08A0520EB3BE00079B218 /* YRDRouterDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A0420EB3BE00079B218 /* YRDRouterDemoUITests.m */; };
+		EBB08A1520EB3C300079B218 /* YRDRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A1420EB3C300079B218 /* YRDRouter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBB089F620EB3BE00079B218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB089D520EB3BDE0079B218 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB089DC20EB3BDE0079B218;
+			remoteInfo = YRDRouterDemo;
+		};
+		EBB08A0120EB3BE00079B218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB089D520EB3BDE0079B218 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB089DC20EB3BDE0079B218;
+			remoteInfo = YRDRouterDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBB089DD20EB3BDE0079B218 /* YRDRouterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YRDRouterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB089E020EB3BDE0079B218 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EBB089E120EB3BDE0079B218 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EBB089E320EB3BDF0079B218 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EBB089E420EB3BDF0079B218 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EBB089E720EB3BDF0079B218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBB089E920EB3BE00079B218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBB089EC20EB3BE00079B218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBB089EE20EB3BE00079B218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB089EF20EB3BE00079B218 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBB089F520EB3BE00079B218 /* YRDRouterDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YRDRouterDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB089F920EB3BE00079B218 /* YRDRouterDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YRDRouterDemoTests.m; sourceTree = "<group>"; };
+		EBB089FB20EB3BE00079B218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB08A0020EB3BE00079B218 /* YRDRouterDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YRDRouterDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB08A0420EB3BE00079B218 /* YRDRouterDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YRDRouterDemoUITests.m; sourceTree = "<group>"; };
+		EBB08A0620EB3BE00079B218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB08A1320EB3C300079B218 /* YRDRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YRDRouter.h; sourceTree = "<group>"; };
+		EBB08A1420EB3C300079B218 /* YRDRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YRDRouter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBB089DA20EB3BDE0079B218 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB089F220EB3BE00079B218 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB089FD20EB3BE00079B218 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBB089D420EB3BDE0079B218 = {
+			isa = PBXGroup;
+			children = (
+				EBB089DF20EB3BDE0079B218 /* YRDRouterDemo */,
+				EBB089F820EB3BE00079B218 /* YRDRouterDemoTests */,
+				EBB08A0320EB3BE00079B218 /* YRDRouterDemoUITests */,
+				EBB089DE20EB3BDE0079B218 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBB089DE20EB3BDE0079B218 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBB089DD20EB3BDE0079B218 /* YRDRouterDemo.app */,
+				EBB089F520EB3BE00079B218 /* YRDRouterDemoTests.xctest */,
+				EBB08A0020EB3BE00079B218 /* YRDRouterDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBB089DF20EB3BDE0079B218 /* YRDRouterDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EBB08A1220EB3C100079B218 /* YRDRouter */,
+				EBB089E020EB3BDE0079B218 /* AppDelegate.h */,
+				EBB089E120EB3BDE0079B218 /* AppDelegate.m */,
+				EBB089E320EB3BDF0079B218 /* ViewController.h */,
+				EBB089E420EB3BDF0079B218 /* ViewController.m */,
+				EBB089E620EB3BDF0079B218 /* Main.storyboard */,
+				EBB089E920EB3BE00079B218 /* Assets.xcassets */,
+				EBB089EB20EB3BE00079B218 /* LaunchScreen.storyboard */,
+				EBB089EE20EB3BE00079B218 /* Info.plist */,
+				EBB089EF20EB3BE00079B218 /* main.m */,
+			);
+			path = YRDRouterDemo;
+			sourceTree = "<group>";
+		};
+		EBB089F820EB3BE00079B218 /* YRDRouterDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBB089F920EB3BE00079B218 /* YRDRouterDemoTests.m */,
+				EBB089FB20EB3BE00079B218 /* Info.plist */,
+			);
+			path = YRDRouterDemoTests;
+			sourceTree = "<group>";
+		};
+		EBB08A0320EB3BE00079B218 /* YRDRouterDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EBB08A0420EB3BE00079B218 /* YRDRouterDemoUITests.m */,
+				EBB08A0620EB3BE00079B218 /* Info.plist */,
+			);
+			path = YRDRouterDemoUITests;
+			sourceTree = "<group>";
+		};
+		EBB08A1220EB3C100079B218 /* YRDRouter */ = {
+			isa = PBXGroup;
+			children = (
+				EBB08A1320EB3C300079B218 /* YRDRouter.h */,
+				EBB08A1420EB3C300079B218 /* YRDRouter.m */,
+			);
+			name = YRDRouter;
+			path = ../../YRDRouter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBB089DC20EB3BDE0079B218 /* YRDRouterDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB08A0920EB3BE00079B218 /* Build configuration list for PBXNativeTarget "YRDRouterDemo" */;
+			buildPhases = (
+				EBB089D920EB3BDE0079B218 /* Sources */,
+				EBB089DA20EB3BDE0079B218 /* Frameworks */,
+				EBB089DB20EB3BDE0079B218 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YRDRouterDemo;
+			productName = YRDRouterDemo;
+			productReference = EBB089DD20EB3BDE0079B218 /* YRDRouterDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBB089F420EB3BE00079B218 /* YRDRouterDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB08A0C20EB3BE00079B218 /* Build configuration list for PBXNativeTarget "YRDRouterDemoTests" */;
+			buildPhases = (
+				EBB089F120EB3BE00079B218 /* Sources */,
+				EBB089F220EB3BE00079B218 /* Frameworks */,
+				EBB089F320EB3BE00079B218 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBB089F720EB3BE00079B218 /* PBXTargetDependency */,
+			);
+			name = YRDRouterDemoTests;
+			productName = YRDRouterDemoTests;
+			productReference = EBB089F520EB3BE00079B218 /* YRDRouterDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EBB089FF20EB3BE00079B218 /* YRDRouterDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB08A0F20EB3BE00079B218 /* Build configuration list for PBXNativeTarget "YRDRouterDemoUITests" */;
+			buildPhases = (
+				EBB089FC20EB3BE00079B218 /* Sources */,
+				EBB089FD20EB3BE00079B218 /* Frameworks */,
+				EBB089FE20EB3BE00079B218 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBB08A0220EB3BE00079B218 /* PBXTargetDependency */,
+			);
+			name = YRDRouterDemoUITests;
+			productName = YRDRouterDemoUITests;
+			productReference = EBB08A0020EB3BE00079B218 /* YRDRouterDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBB089D520EB3BDE0079B218 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "李二狗";
+				TargetAttributes = {
+					EBB089DC20EB3BDE0079B218 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					EBB089F420EB3BE00079B218 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = EBB089DC20EB3BDE0079B218;
+					};
+					EBB089FF20EB3BE00079B218 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = EBB089DC20EB3BDE0079B218;
+					};
+				};
+			};
+			buildConfigurationList = EBB089D820EB3BDE0079B218 /* Build configuration list for PBXProject "YRDRouterDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBB089D420EB3BDE0079B218;
+			productRefGroup = EBB089DE20EB3BDE0079B218 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBB089DC20EB3BDE0079B218 /* YRDRouterDemo */,
+				EBB089F420EB3BE00079B218 /* YRDRouterDemoTests */,
+				EBB089FF20EB3BE00079B218 /* YRDRouterDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBB089DB20EB3BDE0079B218 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB089ED20EB3BE00079B218 /* LaunchScreen.storyboard in Resources */,
+				EBB089EA20EB3BE00079B218 /* Assets.xcassets in Resources */,
+				EBB089E820EB3BDF0079B218 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB089F320EB3BE00079B218 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB089FE20EB3BE00079B218 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBB089D920EB3BDE0079B218 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB089E520EB3BDF0079B218 /* ViewController.m in Sources */,
+				EBB089F020EB3BE00079B218 /* main.m in Sources */,
+				EBB08A1520EB3C300079B218 /* YRDRouter.m in Sources */,
+				EBB089E220EB3BDE0079B218 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB089F120EB3BE00079B218 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB089FA20EB3BE00079B218 /* YRDRouterDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB089FC20EB3BE00079B218 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB08A0520EB3BE00079B218 /* YRDRouterDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBB089F720EB3BE00079B218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB089DC20EB3BDE0079B218 /* YRDRouterDemo */;
+			targetProxy = EBB089F620EB3BE00079B218 /* PBXContainerItemProxy */;
+		};
+		EBB08A0220EB3BE00079B218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB089DC20EB3BDE0079B218 /* YRDRouterDemo */;
+			targetProxy = EBB08A0120EB3BE00079B218 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBB089E620EB3BDF0079B218 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBB089E720EB3BDF0079B218 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBB089EB20EB3BE00079B218 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBB089EC20EB3BE00079B218 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBB08A0720EB3BE00079B218 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EBB08A0820EB3BE00079B218 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBB08A0A20EB3BE00079B218 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AHZ82SGX3;
+				INFOPLIST_FILE = YRDRouterDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yirendai.YRDRouterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBB08A0B20EB3BE00079B218 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AHZ82SGX3;
+				INFOPLIST_FILE = YRDRouterDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yirendai.YRDRouterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EBB08A0D20EB3BE00079B218 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AHZ82SGX3;
+				INFOPLIST_FILE = YRDRouterDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yirendai.YRDRouterDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YRDRouterDemo.app/YRDRouterDemo";
+			};
+			name = Debug;
+		};
+		EBB08A0E20EB3BE00079B218 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AHZ82SGX3;
+				INFOPLIST_FILE = YRDRouterDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yirendai.YRDRouterDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YRDRouterDemo.app/YRDRouterDemo";
+			};
+			name = Release;
+		};
+		EBB08A1020EB3BE00079B218 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AHZ82SGX3;
+				INFOPLIST_FILE = YRDRouterDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yirendai.YRDRouterDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YRDRouterDemo;
+			};
+			name = Debug;
+		};
+		EBB08A1120EB3BE00079B218 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AHZ82SGX3;
+				INFOPLIST_FILE = YRDRouterDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yirendai.YRDRouterDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YRDRouterDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBB089D820EB3BDE0079B218 /* Build configuration list for PBXProject "YRDRouterDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB08A0720EB3BE00079B218 /* Debug */,
+				EBB08A0820EB3BE00079B218 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBB08A0920EB3BE00079B218 /* Build configuration list for PBXNativeTarget "YRDRouterDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB08A0A20EB3BE00079B218 /* Debug */,
+				EBB08A0B20EB3BE00079B218 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBB08A0C20EB3BE00079B218 /* Build configuration list for PBXNativeTarget "YRDRouterDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB08A0D20EB3BE00079B218 /* Debug */,
+				EBB08A0E20EB3BE00079B218 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBB08A0F20EB3BE00079B218 /* Build configuration list for PBXNativeTarget "YRDRouterDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB08A1020EB3BE00079B218 /* Debug */,
+				EBB08A1120EB3BE00079B218 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBB089D520EB3BDE0079B218 /* Project object */;
+}
