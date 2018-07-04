@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "YRDRouter+ViewController.h"
+#import "YRDRouter+ConfigHandle.h"
 @interface AppDelegate ()
 
 @end

@@ -1,25 +1,64 @@
 {
-    "scheme":"kjqApp",
-    "path":{
-        "firstpage":{
-            "objectName":"KJQFirstPageViewController",
-            "params":{
+    "scheme": "kjqApp",
+    "version":"0.0.1",
+    "path": {
+        "firstPage": {
+            "objectName": "KJQFirstPageViewController.Main",
+            "params": {}
+        },
+        "normal": {
+            "objectName": "NormalViewController",
+            "params": {}
+        },
+        "product": {
+            "objectName": "KJQProductListViewController",
+            "params": {}
+        },
+        "discovery": {
+            "objectName": "KJQDiscoveryViewController.xib",
+            "params": {
+                "badSpellUrlKey": "goodKeyForUrlString"
             }
         },
-        "product":{
-            "objectName":"KJQProductListViewController",
-            "params":{
-            }
+        "mine": {
+            "objectName": "KJQMineViewController",
+            "params": {}
         },
-        "discovery":{
-            "objectName":"KJQFirstPageViewController",
-            "params":{
-            }
+        "productList": {
+            "objectName": "KJQProductListViewController",
+            "params": {}
         },
-        "mine":{
-            "objectName":"KJQMineViewController",
-            "params":{
-            }
+        "productCreditCardList": {
+            "objectName": "KJQCreditCardListViewController",
+            "params": {}
+        },
+        "userInfo": {
+            "objectName": "KJQUserInfoViewController",
+            "params": {}
+        },
+        "feedback": {
+            "objectName": "KJQFeedbackViewController.EasyPageStoryBoard",
+            "params": {}
+        },
+        "about": {
+            "objectName": "KJQAboutViewController",
+            "params": {}
+        },
+        "webView": {
+            "objectName": "KJQWebViewController",
+            "params": {}
+        },
+        "login": {
+            "objectName": "KJQLoginViewController",
+            "params": {}
+        },
+        "browseHistory": {
+            "objectName": "KJQBrowseHistoryViewController",
+            "params": {}
+        },
+        "setting": {
+            "objectName": "KJQSettingViewController",
+            "params": {}
         }
         
     }

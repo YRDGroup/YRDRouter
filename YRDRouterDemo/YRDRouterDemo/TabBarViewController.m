@@ -7,8 +7,9 @@
 //
 
 #import "TabBarViewController.h"
-#import "YRDRouter+ViewController.h"
+#import "YRDRouter+ConfigHandle.h"
 #import "UIColor+YRD.h"
+#import "BaseNavigationController.h"
 
 @interface TabBarViewController ()
 
@@ -29,7 +30,7 @@
 
 - (void)configUI {
     
-    UIViewController *firstpage = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"firstpage"]];
+    UIViewController *firstpage = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"firstPage"]];
     [self addChildVC:firstpage
                title:@"首页"
            imageName:@"tabbar_firstpage"
@@ -42,7 +43,8 @@
            imageName:@"tabbar_product"
    selectedImageName:@"tabbar_product_selected"];
     
-    UIViewController *discovery = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"discovery"]];
+    UIViewController *discovery = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"discovery"]
+                                             withUserInfo:@{@"badSpellKeyForUrlString":  @"https://www.baidu.com"}];
     [self addChildVC:discovery
                title:@"发现"
            imageName:@"tabbar_discovery"
@@ -96,7 +98,7 @@
     NSDictionary *selectedAttributes = @{NSForegroundColorAttributeName: selectedColor};
     [vc.tabBarItem setTitleTextAttributes:selectedAttributes forState:UIControlStateSelected];
     
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    BaseNavigationController *navVC = [[BaseNavigationController alloc] initWithRootViewController:vc];
     [self addChildViewController:navVC];
 }
 

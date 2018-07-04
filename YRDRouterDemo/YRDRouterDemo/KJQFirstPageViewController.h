@@ -6,8 +6,8 @@
 //  Copyright © 2018年 李二狗. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface KJQFirstPageViewController : UIViewController
+@interface KJQFirstPageViewController : BaseViewController
 
 @end

@@ -7,9 +7,13 @@
 //
 
 #import "KJQFirstPageViewController.h"
+#import "YRDRouter+ConfigHandle.h"
+#import "OverwriteViewController.h"
+@interface KJQFirstPageViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@interface KJQFirstPageViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) NSArray *titleArray;
 @end
 
 @implementation KJQFirstPageViewController
@@ -17,7 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.titleArray = @[@"router normal VC",@"router Xib VC with params",@"router SB VC",@"overwrite:click this row then click row 0 ",@"wait",@"wait",@"wait",@"wait"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellIndetifier"];
     // Do any additional setup after loading the view.
 }
 
@@ -26,14 +31,58 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIndetifier" forIndexPath:indexPath];
+    cell.textLabel.text = self.titleArray[indexPath.row];
+    return cell;
 }
-*/
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.titleArray.count;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UIViewController *vc;
+    switch (indexPath.row) {
+        case 0:
+        {
+            vc =  [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"normal"]];
+
+        }
+            break;
+        case 1:
+        {
+            vc = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"discovery"]
+                                                     withUserInfo:@{@"badSpellKeyForUrlString":  @"https://www.baidu.com"}];
+        }
+            break;
+        case 2:
+        {
+            vc = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"feedback"]];
+        }
+            break;
+        case 3:
+        {
+            [YRDRouter overwriteHandlerByObjectKey:@"normal" toObjectHandler:^id(NSDictionary *routerParameters) {
+                OverwriteViewController *vc = [[OverwriteViewController alloc]init];
+                return vc;
+            }];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    if (!vc) {
+        return;
+    }
+    vc.navigationItem.title = self.titleArray[indexPath.row];
+    [self.navigationController pushViewController:vc animated:vc];
+    
+}
+
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2018年 李二狗. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface KJQProductListViewController : UIViewController
+@interface KJQProductListViewController : BaseViewController
 
 @property (nonatomic, strong) NSDictionary *params;
 
