@@ -30,27 +30,25 @@
 
 - (void)configUI {
     
-    UIViewController *firstpage = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"firstPage"]];
+    UIViewController *firstpage = [YRDRouter objectForObjectKey:@"firstPage"];
     [self addChildVC:firstpage
                title:@"首页"
            imageName:@"tabbar_firstpage"
    selectedImageName:@"tabbar_firstpage_selected"];
     
-    UIViewController *product = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"product"]
-                                           withUserInfo:@{@"params":  @{@"appType": @"1"}}];
+    UIViewController *product = [YRDRouter objectForObjectKey:@"product" withUserInfo:@{@"params":  @{@"appType": @"1"}}];
     [self addChildVC:product
                title:@"领券"
            imageName:@"tabbar_product"
    selectedImageName:@"tabbar_product_selected"];
     
-    UIViewController *discovery = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"discovery"]
-                                             withUserInfo:@{@"badSpellKeyForUrlString":  @"https://www.baidu.com"}];
+    UIViewController *discovery = [YRDRouter objectForObjectKey:@"discovery" withUserInfo:@{@"badSpellKeyForUrlString":  @"https://www.baidu.com"}];
     [self addChildVC:discovery
                title:@"发现"
            imageName:@"tabbar_discovery"
    selectedImageName:@"tabbar_discovery_selected"];
     
-    UIViewController *mine = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"mine"]];
+    UIViewController *mine = [YRDRouter objectForObjectKey:@"mine"];
     [self addChildVC:mine
                title:@"我的"
            imageName:@"tabbar_mine"

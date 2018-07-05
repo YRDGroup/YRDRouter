@@ -2,6 +2,10 @@
     "scheme": "kjqApp",
     "version":"0.0.1",
     "path": {
+        "share": {
+            "objectName": "KJQShareMenuPopView.xib",
+            "params": {}
+        },
         "firstPage": {
             "objectName": "KJQFirstPageViewController.Main",
             "params": {}

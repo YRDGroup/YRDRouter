@@ -9,6 +9,7 @@
 #import "KJQFirstPageViewController.h"
 #import "YRDRouter+ConfigHandle.h"
 #import "OverwriteViewController.h"
+#import "KJQShareMenuPopView.h"
 @interface KJQFirstPageViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titleArray = @[@"router normal VC",@"router Xib VC with params",@"router SB VC",@"overwrite:click this row then click row 0 ",@"wait",@"wait",@"wait",@"wait"];
+    self.titleArray = @[@"router normal VC",@"router Xib VC with params",@"router SB VC",@"overwrite:click this row then click row 0 ",@"KJQShareMenuPopView",@"wait",@"wait",@"wait"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellIndetifier"];
     // Do any additional setup after loading the view.
 }
@@ -48,19 +49,18 @@
     switch (indexPath.row) {
         case 0:
         {
-            vc =  [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"normal"]];
+            vc =  [YRDRouter objectForObjectKey:@"normal"];
 
         }
             break;
         case 1:
         {
-            vc = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"discovery"]
-                                                     withUserInfo:@{@"badSpellKeyForUrlString":  @"https://www.baidu.com"}];
+            vc = [YRDRouter objectForObjectKey:@"discovery" withUserInfo:@{@"badSpellKeyForUrlString":  @"https://www.baidu.com"}];
         }
             break;
         case 2:
         {
-            vc = [YRDRouter objectForURL:[YRDRouter getRouterURLByObjectKey:@"feedback"]];
+            vc = [YRDRouter objectForObjectKey:@"feedback"];
         }
             break;
         case 3:
@@ -69,6 +69,12 @@
                 OverwriteViewController *vc = [[OverwriteViewController alloc]init];
                 return vc;
             }];
+        }
+            break;
+        case 4:
+        {
+            KJQShareMenuPopView *popView =  [YRDRouter objectForObjectKey:@"share" withUserInfo:@{@"shareChannel":  @(KJQShareChannelCopyLink | KJQShareChannelWXCircle | KJQShareChannelWXFriends)}];
+            [popView show];
         }
             break;
             

@@ -14,15 +14,13 @@
 + (id)view_initViewWithClassName:(NSString *)className type:(NSString *)type
 {
     if (type == nil || type.length == 0) {
-        return [[NSClassFromString(className) alloc]init];
+        return [[NSClassFromString(className) alloc]initWithFrame:CGRectZero];
     }
     if ([type.lowercaseString isEqualToString:@"xib"]) {
         UINib *nib = [UINib nibWithNibName:className bundle:[NSBundle mainBundle]];
         return [nib instantiateWithOwner:nil options:nil].firstObject;
-    } else {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:type bundle:nil];
-        return [storyboard instantiateViewControllerWithIdentifier:className];
     }
+    return nil;
 }
 
 @end

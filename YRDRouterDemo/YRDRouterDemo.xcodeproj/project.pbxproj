@@ -18,6 +18,11 @@
 		EB62C66C20ECD1A900E1DEAA /* YRDRouter+ConfigHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = EB62C66B20ECD1A900E1DEAA /* YRDRouter+ConfigHandle.m */; };
 		EB62C67020ECDEDF00E1DEAA /* OverwriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB62C66E20ECDEDF00E1DEAA /* OverwriteViewController.m */; };
 		EB62C67120ECDEDF00E1DEAA /* OverwriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB62C66F20ECDEDF00E1DEAA /* OverwriteViewController.xib */; };
+		EB62C70920EDF12B00E1DEAA /* KJQShareMenuPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB62C70820EDF12B00E1DEAA /* KJQShareMenuPopView.m */; };
+		EB62C70B20EDF13600E1DEAA /* KJQShareMenuPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB62C70A20EDF13600E1DEAA /* KJQShareMenuPopView.xib */; };
+		EB62C71420EDF45100E1DEAA /* YRDPopViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB62C70E20EDF45100E1DEAA /* YRDPopViewHelper.m */; };
+		EB62C71520EDF45100E1DEAA /* YRDAbstractPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB62C70F20EDF45100E1DEAA /* YRDAbstractPopView.m */; };
+		EB62C71620EDF45100E1DEAA /* YRDPopViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB62C71220EDF45100E1DEAA /* YRDPopViewManager.m */; };
 		EBB089E220EB3BDE0079B218 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB089E120EB3BDE0079B218 /* AppDelegate.m */; };
 		EBB089E820EB3BDF0079B218 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB089E620EB3BDF0079B218 /* Main.storyboard */; };
 		EBB089EA20EB3BE00079B218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB089E920EB3BE00079B218 /* Assets.xcassets */; };
@@ -78,6 +83,15 @@
 		EB62C66D20ECDEDF00E1DEAA /* OverwriteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OverwriteViewController.h; sourceTree = "<group>"; };
 		EB62C66E20ECDEDF00E1DEAA /* OverwriteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OverwriteViewController.m; sourceTree = "<group>"; };
 		EB62C66F20ECDEDF00E1DEAA /* OverwriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverwriteViewController.xib; sourceTree = "<group>"; };
+		EB62C70720EDF12B00E1DEAA /* KJQShareMenuPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJQShareMenuPopView.h; sourceTree = "<group>"; };
+		EB62C70820EDF12B00E1DEAA /* KJQShareMenuPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJQShareMenuPopView.m; sourceTree = "<group>"; };
+		EB62C70A20EDF13600E1DEAA /* KJQShareMenuPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJQShareMenuPopView.xib; sourceTree = "<group>"; };
+		EB62C70E20EDF45100E1DEAA /* YRDPopViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDPopViewHelper.m; sourceTree = "<group>"; };
+		EB62C70F20EDF45100E1DEAA /* YRDAbstractPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDAbstractPopView.m; sourceTree = "<group>"; };
+		EB62C71020EDF45100E1DEAA /* YRDPopViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDPopViewManager.h; sourceTree = "<group>"; };
+		EB62C71120EDF45100E1DEAA /* YRDPopViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDPopViewHelper.h; sourceTree = "<group>"; };
+		EB62C71220EDF45100E1DEAA /* YRDPopViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDPopViewManager.m; sourceTree = "<group>"; };
+		EB62C71320EDF45100E1DEAA /* YRDAbstractPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDAbstractPopView.h; sourceTree = "<group>"; };
 		EBB089DD20EB3BDE0079B218 /* YRDRouterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YRDRouterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB089E020EB3BDE0079B218 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EBB089E120EB3BDE0079B218 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -158,6 +172,27 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		EB62C70C20EDF45100E1DEAA /* YRDPopView */ = {
+			isa = PBXGroup;
+			children = (
+				EB62C70D20EDF45100E1DEAA /* classes */,
+			);
+			path = YRDPopView;
+			sourceTree = "<group>";
+		};
+		EB62C70D20EDF45100E1DEAA /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				EB62C70E20EDF45100E1DEAA /* YRDPopViewHelper.m */,
+				EB62C70F20EDF45100E1DEAA /* YRDAbstractPopView.m */,
+				EB62C71020EDF45100E1DEAA /* YRDPopViewManager.h */,
+				EB62C71120EDF45100E1DEAA /* YRDPopViewHelper.h */,
+				EB62C71220EDF45100E1DEAA /* YRDPopViewManager.m */,
+				EB62C71320EDF45100E1DEAA /* YRDAbstractPopView.h */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
 		EBB089D420EB3BDE0079B218 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +216,7 @@
 		EBB089DF20EB3BDE0079B218 /* YRDRouterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EB62C70C20EDF45100E1DEAA /* YRDPopView */,
 				EB62C65A20ECCD4800E1DEAA /* Helper */,
 				EBB08A3220EB92C70079B218 /* YRDCategory */,
 				EBB08A2420EB8C140079B218 /* config.json */,
@@ -190,6 +226,9 @@
 				EBB089E120EB3BDE0079B218 /* AppDelegate.m */,
 				EBB08A2C20EB91150079B218 /* TabBarViewController.h */,
 				EBB08A2D20EB91150079B218 /* TabBarViewController.m */,
+				EB62C70720EDF12B00E1DEAA /* KJQShareMenuPopView.h */,
+				EB62C70820EDF12B00E1DEAA /* KJQShareMenuPopView.m */,
+				EB62C70A20EDF13600E1DEAA /* KJQShareMenuPopView.xib */,
 				EBB08A2620EB8E080079B218 /* KJQFirstPageViewController.h */,
 				EBB08A2720EB8E080079B218 /* KJQFirstPageViewController.m */,
 				EB62C65720ECCBD900E1DEAA /* NormalViewController.h */,
@@ -382,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB62C70B20EDF13600E1DEAA /* KJQShareMenuPopView.xib in Resources */,
 				EBB089ED20EB3BE00079B218 /* LaunchScreen.storyboard in Resources */,
 				EBB08A1920EB3E5F0079B218 /* YRDRouter.podspec in Resources */,
 				EB62C67120ECDEDF00E1DEAA /* OverwriteViewController.xib in Resources */,
@@ -416,15 +456,19 @@
 			files = (
 				EB62C66320ECCDD100E1DEAA /* BaseViewController.m in Sources */,
 				EBB08A3120EB91B50079B218 /* KJQMineViewController.m in Sources */,
+				EB62C70920EDF12B00E1DEAA /* KJQShareMenuPopView.m in Sources */,
 				EBB08A4420EB92C70079B218 /* NSDictionary+YRDJSONString.m in Sources */,
 				EB62C66C20ECD1A900E1DEAA /* YRDRouter+ConfigHandle.m in Sources */,
 				EBB08A4720EB92C70079B218 /* UITabBarItem+YRD.m in Sources */,
+				EB62C71420EDF45100E1DEAA /* YRDPopViewHelper.m in Sources */,
 				EB62C64A20ECB7DB00E1DEAA /* KJQDiscoveryViewController.m in Sources */,
 				EBB08A4220EB92C70079B218 /* UIView+YRDBehavior.m in Sources */,
 				EBB089F020EB3BE00079B218 /* main.m in Sources */,
+				EB62C71620EDF45100E1DEAA /* YRDPopViewManager.m in Sources */,
 				EB62C66020ECCD9C00E1DEAA /* BaseNavigationController.m in Sources */,
 				EBB08A2320EB52C10079B218 /* YRDRouter+ViewController.m in Sources */,
 				EB62C66620ECD0F500E1DEAA /* YRDRouter+View.m in Sources */,
+				EB62C71520EDF45100E1DEAA /* YRDAbstractPopView.m in Sources */,
 				EBB08A1D20EB40B90079B218 /* YRDRouter.m in Sources */,
 				EBB08A2E20EB91150079B218 /* TabBarViewController.m in Sources */,
 				EBB08A2B20EB8E180079B218 /* KJQProductListViewController.m in Sources */,
@@ -607,6 +651,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AHZ82SGX3;
 				INFOPLIST_FILE = YRDRouterDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,6 +669,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AHZ82SGX3;
 				INFOPLIST_FILE = YRDRouterDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

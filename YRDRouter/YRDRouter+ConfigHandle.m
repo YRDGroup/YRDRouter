@@ -10,31 +10,19 @@
 #import "YRDRouter+ViewController.h"
 #import "YRDRouter+View.h"
 
+#define kYRDRouterURLKey @"url"
+#define kYRDRouterObjectNameKey kYRDRouterObjectNameKey
+#define kYRDRouterParamsKey @"params"
+
 @implementation YRDRouter (ConfigHandle)
 
-/* ag:
- {
- "scheme":"kjqApp",
- "path":{
- "firstPage":{
- "objectName":"KJQFirstPageViewController",
- //"params":{
- //   "keyName":"userInfoName",  命名纠正,此版本不涉及
- //   "keyNameOfVC":"userInfoName",
- //}
- }
- "product":{"objectName":"KJQProductListViewController"},
- }
- 
- }
- */
 + (void)registerURLPatternWithConfig:(NSDictionary *)config
 {
     [YRDRouter sharedInstance].config = [config copy];
     [config[@"path"] enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         NSDictionary *params = [self getUrlAndObjectNameWithObjectKey:key];
-        [YRDRouter registerURLPattern:params[@"url"] toObjectHandler:^id(NSDictionary *routerParameters) {
-            NSString *classString = params[@"objectName"];
+        [YRDRouter registerURLPattern:params[kYRDRouterURLKey] toObjectHandler:^id(NSDictionary *routerParameters) {
+            NSString *classString = params[kYRDRouterObjectNameKey];
             NSArray *objectNameArray = [classString componentsSeparatedByString:@"."];
             NSString *className = [objectNameArray firstObject];
             NSString *type = nil;
@@ -60,17 +48,23 @@
 + (void)overwriteHandlerByObjectKey:(NSString *)objectKey toObjectHandler:(YRDRouterObjectHandler)handler
 {
      NSDictionary *params = [self getUrlAndObjectNameWithObjectKey:objectKey];
-    [YRDRouter registerURLPattern:params[@"url"] toObjectHandler:handler];
+    [YRDRouter deregisterURLPattern:params[kYRDRouterURLKey]];
+    [YRDRouter registerURLPattern:params[kYRDRouterURLKey] toObjectHandler:handler];
 }
 
 + (NSString *)getRouterURLByObjectKey:(NSString *)objectKey;
 {
-    return [self getUrlAndObjectNameWithObjectKey:objectKey][@"url"];
+    return [self getUrlAndObjectNameWithObjectKey:objectKey][kYRDRouterURLKey];
 }
 
 + (NSString *)getObjectNameByObjectKey:(NSString *)objectKey
 {
-    return [self getUrlAndObjectNameWithObjectKey:objectKey][@"objectName"];
+    return [self getUrlAndObjectNameWithObjectKey:objectKey][kYRDRouterObjectNameKey];
+}
+
++ (NSDictionary *)getObjectMotifyParamsByObjectKey:(NSString *)objectKey
+{
+    return [self getUrlAndObjectNameWithObjectKey:objectKey][@"parmas"];
 }
 
 + (NSDictionary *)getUrlAndObjectNameWithObjectKey:(NSString *)objectKey
@@ -86,8 +80,38 @@
         return nil;
     }
     NSString *RouterURL = [NSString stringWithFormat:@"%@://%@",scheme,objectKey];
-    NSString *objectName = objectDic[@"objectName"];
-    return @{@"url":RouterURL,@"objectName":objectName};
+    NSString *objectName = objectDic[kYRDRouterObjectNameKey];
+    NSDictionary *parmas = [objectDic valueForKey:@"params"];
+    if (!parmas) {
+        parmas = @{};
+    }
+    return @{kYRDRouterURLKey:RouterURL,kYRDRouterObjectNameKey:objectName,@"parmas":parmas};
 }
 
++ (id)objectForObjectKey:(NSString *)objectKey {
+    return [self objectForObjectKey:objectKey withUserInfo:nil];
+}
+
++ (id)objectForObjectKey:(NSString *)objectKey withUserInfo:(NSDictionary *)userInfo {
+    return [self objectForURL:[YRDRouter getRouterURLByObjectKey:objectKey] withUserInfo:userInfo];
+}
+
++ (void)openURLWithObjectKey:(NSString *)objectKey {
+    [self openURLWithObjectKey:objectKey completion:nil];
+}
+
++ (void)openURLWithObjectKey:(NSString *)objectKey completion:(void (^)(id result))completion {
+    [self openURLWithObjectKey:objectKey withUserInfo:nil completion:completion];
+}
+
++ (void)openURLWithObjectKey:(NSString *)objectKey withUserInfo:(NSDictionary *)userInfo completion:(void (^)(id result))completion {
+    [self openURL:[YRDRouter getRouterURLByObjectKey:objectKey] withUserInfo:userInfo completion:completion];
+}
+
++ (BOOL)canOpenURLWithObjectKey:(NSString *)objectKey {
+   return [self canOpenURLWithObjectKey:objectKey matchExactly:NO];
+}
++ (BOOL)canOpenURLWithObjectKey:(NSString *)objectKey matchExactly:(BOOL)exactly {
+   return [self canOpenURL:[YRDRouter getRouterURLByObjectKey:objectKey] matchExactly:exactly];
+}
 @end
