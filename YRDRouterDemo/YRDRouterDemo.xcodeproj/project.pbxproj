@@ -183,12 +183,12 @@
 		EB62C70D20EDF45100E1DEAA /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				EB62C71120EDF45100E1DEAA /* YRDPopViewHelper.h */,
 				EB62C70E20EDF45100E1DEAA /* YRDPopViewHelper.m */,
+				EB62C71320EDF45100E1DEAA /* YRDAbstractPopView.h */,
 				EB62C70F20EDF45100E1DEAA /* YRDAbstractPopView.m */,
 				EB62C71020EDF45100E1DEAA /* YRDPopViewManager.h */,
-				EB62C71120EDF45100E1DEAA /* YRDPopViewHelper.h */,
 				EB62C71220EDF45100E1DEAA /* YRDPopViewManager.m */,
-				EB62C71320EDF45100E1DEAA /* YRDAbstractPopView.h */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -651,7 +651,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AHZ82SGX3;
 				INFOPLIST_FILE = YRDRouterDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -669,7 +669,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AHZ82SGX3;
 				INFOPLIST_FILE = YRDRouterDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

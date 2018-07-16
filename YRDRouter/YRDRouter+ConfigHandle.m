@@ -11,7 +11,7 @@
 #import "YRDRouter+View.h"
 
 #define kYRDRouterURLKey @"url"
-#define kYRDRouterObjectNameKey kYRDRouterObjectNameKey
+#define kYRDRouterObjectNameKey @"objectName"
 #define kYRDRouterParamsKey @"params"
 
 @implementation YRDRouter (ConfigHandle)
