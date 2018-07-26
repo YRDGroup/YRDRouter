@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titleArray = @[@"router normal VC",@"router Xib VC with params",@"router SB VC",@"overwrite:click this row then click row 0 ",@"KJQShareMenuPopView",@"wait",@"wait",@"wait"];
+    self.titleArray = @[@"router normal VC",@"router Xib VC with params",@"router SB VC",@"overwrite:click this row then click row 0 ",@"KJQShareMenuPopView",@"默认异常处理",@"wait",@"wait"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellIndetifier"];
     // Do any additional setup after loading the view.
 }
