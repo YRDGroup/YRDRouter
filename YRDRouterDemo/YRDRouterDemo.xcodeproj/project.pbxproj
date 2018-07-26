@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB3245E6210979FD009EE3F1 /* YRDRouterErrorDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3245E5210979FD009EE3F1 /* YRDRouterErrorDefaultView.m */; };
 		EB62C64A20ECB7DB00E1DEAA /* KJQDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB62C64820ECB7DB00E1DEAA /* KJQDiscoveryViewController.m */; };
 		EB62C64B20ECB7DB00E1DEAA /* KJQDiscoveryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB62C64920ECB7DB00E1DEAA /* KJQDiscoveryViewController.xib */; };
 		EB62C64D20ECBEEF00E1DEAA /* EasyPageStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB62C64C20ECBEEF00E1DEAA /* EasyPageStoryBoard.storyboard */; };
@@ -33,7 +34,6 @@
 		EBB08A1920EB3E5F0079B218 /* YRDRouter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EBB08A1820EB3E5F0079B218 /* YRDRouter.podspec */; };
 		EBB08A1D20EB40B90079B218 /* YRDRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A1B20EB40B90079B218 /* YRDRouter.m */; };
 		EBB08A2320EB52C10079B218 /* YRDRouter+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A2220EB52C10079B218 /* YRDRouter+ViewController.m */; };
-		EBB08A2520EB8C140079B218 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = EBB08A2420EB8C140079B218 /* config.json */; };
 		EBB08A2820EB8E080079B218 /* KJQFirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A2720EB8E080079B218 /* KJQFirstPageViewController.m */; };
 		EBB08A2B20EB8E180079B218 /* KJQProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A2A20EB8E180079B218 /* KJQProductListViewController.m */; };
 		EBB08A2E20EB91150079B218 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A2D20EB91150079B218 /* TabBarViewController.m */; };
@@ -44,6 +44,7 @@
 		EBB08A4520EB92C70079B218 /* UIView+YRD.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A3B20EB92C70079B218 /* UIView+YRD.m */; };
 		EBB08A4620EB92C70079B218 /* NSString+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A3D20EB92C70079B218 /* NSString+Validate.m */; };
 		EBB08A4720EB92C70079B218 /* UITabBarItem+YRD.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB08A3E20EB92C70079B218 /* UITabBarItem+YRD.m */; };
+		EBDEACFE20FC865B007622BD /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = EBB08A2420EB8C140079B218 /* config.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB3245E4210979FD009EE3F1 /* YRDRouterErrorDefaultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YRDRouterErrorDefaultView.h; sourceTree = "<group>"; };
+		EB3245E5210979FD009EE3F1 /* YRDRouterErrorDefaultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YRDRouterErrorDefaultView.m; sourceTree = "<group>"; };
 		EB62C64720ECB7DB00E1DEAA /* KJQDiscoveryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJQDiscoveryViewController.h; sourceTree = "<group>"; };
 		EB62C64820ECB7DB00E1DEAA /* KJQDiscoveryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJQDiscoveryViewController.m; sourceTree = "<group>"; };
 		EB62C64920ECB7DB00E1DEAA /* KJQDiscoveryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJQDiscoveryViewController.xib; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 				EBB08A2220EB52C10079B218 /* YRDRouter+ViewController.m */,
 				EB62C66420ECD0F500E1DEAA /* YRDRouter+View.h */,
 				EB62C66520ECD0F500E1DEAA /* YRDRouter+View.m */,
+				EB3245E4210979FD009EE3F1 /* YRDRouterErrorDefaultView.h */,
+				EB3245E5210979FD009EE3F1 /* YRDRouterErrorDefaultView.m */,
 			);
 			name = YRDRouter;
 			path = ../../YRDRouter;
@@ -421,12 +426,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDEACFE20FC865B007622BD /* config.json in Resources */,
 				EB62C70B20EDF13600E1DEAA /* KJQShareMenuPopView.xib in Resources */,
 				EBB089ED20EB3BE00079B218 /* LaunchScreen.storyboard in Resources */,
 				EBB08A1920EB3E5F0079B218 /* YRDRouter.podspec in Resources */,
 				EB62C67120ECDEDF00E1DEAA /* OverwriteViewController.xib in Resources */,
 				EB62C64B20ECB7DB00E1DEAA /* KJQDiscoveryViewController.xib in Resources */,
-				EBB08A2520EB8C140079B218 /* config.json in Resources */,
 				EBB089EA20EB3BE00079B218 /* Assets.xcassets in Resources */,
 				EB62C64D20ECBEEF00E1DEAA /* EasyPageStoryBoard.storyboard in Resources */,
 				EBB089E820EB3BDF0079B218 /* Main.storyboard in Resources */,
@@ -472,6 +477,7 @@
 				EBB08A1D20EB40B90079B218 /* YRDRouter.m in Sources */,
 				EBB08A2E20EB91150079B218 /* TabBarViewController.m in Sources */,
 				EBB08A2B20EB8E180079B218 /* KJQProductListViewController.m in Sources */,
+				EB3245E6210979FD009EE3F1 /* YRDRouterErrorDefaultView.m in Sources */,
 				EB62C67020ECDEDF00E1DEAA /* OverwriteViewController.m in Sources */,
 				EBB089E220EB3BDE0079B218 /* AppDelegate.m in Sources */,
 				EBB08A4320EB92C70079B218 /* UIColor+YRD.m in Sources */,

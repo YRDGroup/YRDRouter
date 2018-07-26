@@ -52,6 +52,8 @@
  */
 + (id)objectForObjectKey:(NSString *)objectKey withUserInfo:(NSDictionary *)userInfo;
 
++ (id)objectForObjectKey:(NSString *)objectKey withUserInfo:(NSDictionary *)userInfo performSelectorForCompletion:(SEL)aSelector;
+
 /**
  *  打开此 URL
  *  会在已注册的 URL -> Handler 中寻找，如果找到，则执行 Handler

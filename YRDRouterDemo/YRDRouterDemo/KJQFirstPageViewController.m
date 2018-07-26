@@ -79,6 +79,9 @@
             break;
             
         default:
+        {
+              vc = [YRDRouter objectForObjectKey:kDefaultErrorRouterKey];
+        }
             break;
     }
     

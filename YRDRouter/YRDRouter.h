@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 extern NSString *const YRDRouterParameterURL;
 extern NSString *const YRDRouterParameterCompletion;
 extern NSString *const YRDRouterParameterUserInfo;
+
+//如果需要重写错误路由，请使用此key,可配置在配置路由中
+#define kDefaultErrorRouterKey @"DefaultErrorRouterKey"
 
 /**
  *  routerParameters 里内置的几个参数会用到上面定义的 string

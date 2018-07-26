@@ -37,6 +37,22 @@ NSString *const YRDRouterParameterUserInfo = @"YRDRouterParameterUserInfo";
     return instance;
 }
 
+- (void)setConfig:(NSDictionary *)config
+{
+    if (config) {
+       config = [NSMutableDictionary dictionaryWithDictionary:config];
+        NSMutableDictionary *path = [NSMutableDictionary dictionaryWithDictionary:config[@"path"]];
+        if (![path.allKeys containsObject:kDefaultErrorRouterKey]) {
+            [path setObject:@{
+                              @"objectName": @"YRDRouterErrorDefaultView",
+                              @"params":@{}
+                              } forKey:kDefaultErrorRouterKey];
+            [config setValue:path forKey:@"path"];
+        }
+    }
+    _config = config;
+}
+
 + (void)registerURLPattern:(NSString *)URLPattern toHandler:(YRDRouterHandler)handler
 {
     [[self sharedInstance] addURLPattern:URLPattern andHandler:handler];
@@ -59,7 +75,7 @@ NSString *const YRDRouterParameterUserInfo = @"YRDRouterParameterUserInfo";
 
 + (void)openURL:(NSString *)URL withUserInfo:(NSDictionary *)userInfo completion:(void (^)(id result))completion
 {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > NSFoundationVersionNumber_iOS_8_x_Max
+#if NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_8_x_Max
 URL = [URL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 #else
 URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -69,7 +85,7 @@ URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [parameters enumerateKeysAndObjectsUsingBlock:^(id key, NSString *obj, BOOL *stop) {
         if ([obj isKindOfClass:[NSString class]]) {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > NSFoundationVersionNumber_iOS_8_x_Max
+#if NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_8_x_Max
              parameters[key] = [obj stringByRemovingPercentEncoding];
 #else
              parameters[key] = [obj stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -144,14 +160,13 @@ URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 {
     YRDRouter *router = [YRDRouter sharedInstance];
     
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > NSFoundationVersionNumber_iOS_8_x_Max
+#if NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_8_x_Max
     URL = [URL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 #else
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 #endif
     NSMutableDictionary *parameters = [router extractParametersFromURL:URL matchExactly:NO];
     YRDRouterObjectHandler handler = parameters[@"block"];
-    
     if (handler) {
         if (userInfo) {
             parameters[YRDRouterParameterUserInfo] = userInfo;

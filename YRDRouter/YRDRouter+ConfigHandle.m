@@ -12,15 +12,16 @@
 
 #define kYRDRouterURLKey @"url"
 #define kYRDRouterObjectNameKey @"objectName"
-#define kYRDRouterParamsKey @"params"
+#define kYRDRouterMotifyParamsKey @"motifyParams"
 
 @implementation YRDRouter (ConfigHandle)
 
 + (void)registerURLPatternWithConfig:(NSDictionary *)config
 {
     [YRDRouter sharedInstance].config = [config copy];
-    [config[@"path"] enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+    [[YRDRouter sharedInstance].config[@"path"] enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         NSDictionary *params = [self getUrlAndObjectNameWithObjectKey:key];
+        NSAssert(params != nil, @"无效路由");
         [YRDRouter registerURLPattern:params[kYRDRouterURLKey] toObjectHandler:^id(NSDictionary *routerParameters) {
             NSString *classString = params[kYRDRouterObjectNameKey];
             NSArray *objectNameArray = [classString componentsSeparatedByString:@"."];
@@ -37,9 +38,16 @@
                 object = [YRDRouter view_initViewWithClassName:className type:type];
             }
             NSDictionary *userInfo = routerParameters[YRDRouterParameterUserInfo];
-            [userInfo enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-                [object setValue:obj forKey:key];
-            }];
+            NSDictionary *motifyParams = params[kYRDRouterMotifyParamsKey];
+            if (![params[kYRDRouterURLKey] containsString:kDefaultErrorRouterKey]) {
+                [userInfo enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    if (motifyParams && [motifyParams.allKeys containsObject:key]) {
+                        key = motifyParams[key];
+                    }
+                    [object setValue:obj forKey:key];
+                }];
+            }
+            
             return object;
         }];
     }];
@@ -47,7 +55,8 @@
 
 + (void)overwriteHandlerByObjectKey:(NSString *)objectKey toObjectHandler:(YRDRouterObjectHandler)handler
 {
-     NSDictionary *params = [self getUrlAndObjectNameWithObjectKey:objectKey];
+    NSDictionary *params = [self getUrlAndObjectNameWithObjectKey:objectKey];
+    NSAssert(params != nil, @"不存在的路由");
     [YRDRouter deregisterURLPattern:params[kYRDRouterURLKey]];
     [YRDRouter registerURLPattern:params[kYRDRouterURLKey] toObjectHandler:handler];
 }
@@ -64,11 +73,11 @@
 
 + (NSDictionary *)getObjectMotifyParamsByObjectKey:(NSString *)objectKey
 {
-    return [self getUrlAndObjectNameWithObjectKey:objectKey][@"parmas"];
+    return [self getUrlAndObjectNameWithObjectKey:objectKey][kYRDRouterMotifyParamsKey];
 }
 
-+ (NSDictionary *)getUrlAndObjectNameWithObjectKey:(NSString *)objectKey
-{
+//注册路由 键值对获取
++ (NSDictionary *)register_getUrlAndObjectNameWithObjectKey:(NSString *)objectKey {
     //TODO: 优化参数安全性
     NSAssert(objectKey,@"router config can not be nil");
     NSDictionary *config = [YRDRouter sharedInstance].config;
@@ -85,15 +94,47 @@
     if (!parmas) {
         parmas = @{};
     }
-    return @{kYRDRouterURLKey:RouterURL,kYRDRouterObjectNameKey:objectName,@"parmas":parmas};
+    return @{kYRDRouterURLKey:RouterURL,kYRDRouterObjectNameKey:objectName,kYRDRouterMotifyParamsKey:parmas};
+}
+
+
+//路由实现 键值对获取
++ (NSDictionary *)getUrlAndObjectNameWithObjectKey:(NSString *)objectKey
+{
+    NSDictionary *registerDic = [self register_getUrlAndObjectNameWithObjectKey:objectKey];
+    if (!registerDic) {
+        objectKey = kDefaultErrorRouterKey;
+      return [self getUrlAndObjectNameWithObjectKey:objectKey];
+    }
+    return registerDic;
 }
 
 + (id)objectForObjectKey:(NSString *)objectKey {
-    return [self objectForObjectKey:objectKey withUserInfo:nil];
+     return [self objectForObjectKey:objectKey withUserInfo:nil performSelectorForCompletion:nil];
 }
 
 + (id)objectForObjectKey:(NSString *)objectKey withUserInfo:(NSDictionary *)userInfo {
-    return [self objectForURL:[YRDRouter getRouterURLByObjectKey:objectKey] withUserInfo:userInfo];
+    return [self objectForObjectKey:objectKey withUserInfo:userInfo performSelectorForCompletion:nil];
+}
+
++ (id)objectForObjectKey:(NSString *)objectKey withUserInfo:(NSDictionary *)userInfo performSelectorForCompletion:(SEL)aSelector {
+    if ([objectKey isEqualToString:kDefaultErrorRouterKey]) {
+        userInfo = nil;
+        aSelector = @selector(show);
+    }
+    id object = [self objectForURL:[YRDRouter getRouterURLByObjectKey:objectKey] withUserInfo:userInfo];
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    if (aSelector && [object canPerformAction:aSelector withSender:nil]) {
+        [object performSelector:aSelector];
+    }
+#pragma clang diagnostic pop
+    
+    if ([objectKey isEqualToString:kDefaultErrorRouterKey]) {
+        return nil;
+    }
+    return object;
 }
 
 + (void)openURLWithObjectKey:(NSString *)objectKey {
@@ -105,6 +146,9 @@
 }
 
 + (void)openURLWithObjectKey:(NSString *)objectKey withUserInfo:(NSDictionary *)userInfo completion:(void (^)(id result))completion {
+    if ([objectKey isEqualToString:kDefaultErrorRouterKey]) {
+        userInfo = nil;
+    }
     [self openURL:[YRDRouter getRouterURLByObjectKey:objectKey] withUserInfo:userInfo completion:completion];
 }
 
