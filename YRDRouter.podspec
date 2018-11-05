@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     the router of the modules
                    DESC
 
-  s.homepage     = "http://gitlab.yixinonline.org/yrd-ios-pod/YRDRouter"
+  s.homepage     = "https://github.com/YRDGroup/YRDRouter"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -53,9 +53,9 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "李二狗" => "chanli1@creditease.cn" }
+  s.author             = { "李二狗" => "10915819@qq.com" }
   # Or just: s.author    = "李二狗"
-  # s.authors            = { "李二狗" => "chanli1@creditease.cn" }
+  # s.authors            = { "李二狗" => "10915819@qq.com" }
   # s.social_media_url   = "http://twitter.com/李二狗"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = {
-                    :git => "http://gitlab.yixinonline.org/yrd-ios-pod/YRDRouter.git",
+                    :git => "https://github.com/YRDGroup/YRDRouter.git",
                     :tag => "#{s.version}"
                     }
 
